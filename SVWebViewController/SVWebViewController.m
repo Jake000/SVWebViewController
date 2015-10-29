@@ -163,10 +163,8 @@
 
 - (UIBarButtonItem *)backBarButtonItem {
     if (!_backBarButtonItem) {
-        _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SVWebViewController.bundle/SVWebViewControllerBack"]
-                                                              style:UIBarButtonItemStylePlain
-                                                             target:self
-                                                             action:@selector(goBackTapped:)];
+        _backBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:105 /* Hidden previous button icon */
+                                                                           target:self action:@selector(goBackTapped:)];
         _backBarButtonItem.width = 18.0f;
     }
     return _backBarButtonItem;
@@ -174,10 +172,8 @@
 
 - (UIBarButtonItem *)forwardBarButtonItem {
     if (!_forwardBarButtonItem) {
-        _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SVWebViewController.bundle/SVWebViewControllerNext"]
-                                                                 style:UIBarButtonItemStylePlain
-                                                                target:self
-                                                                action:@selector(goForwardTapped:)];
+        _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:106 /* Hidden next button icon */
+                                                                              target:self action:@selector(goForwardTapped:)];
         _forwardBarButtonItem.width = 18.0f;
     }
     return _forwardBarButtonItem;
